@@ -1,17 +1,4 @@
-export const Button = '<Button {{disabled}} {{size}} {{type}} {{ghost}} {{danger}}>\n\t{{label}}\n</Button>';
-
-export const components: Object = {
-  button: {
-    el: 'Button',
-    label: '',
-    attr: {
-      disabled: null,
-      size: null,
-      type: null,
-      ghost: null,
-    },
-  },
-};
+import * as components from './components';
 
 function keyExtractor(str) {
   return str.split('#', 1)[0];
