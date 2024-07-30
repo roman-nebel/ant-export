@@ -10,7 +10,7 @@ function getComponents() {
     const { componentProperties, mainComponent } = component;
     const componentName = mainComponent.parent?.name;
 
-    const componentParams = prepareComponentParameters(componentName.toLowerCase(), componentProperties);
+    const componentParams = prepareComponentParameters(componentName, componentProperties);
 
     return {
       name: componentName,

@@ -15,9 +15,17 @@ function stringToBoolean(str) {
   return str;
 }
 
+function createDefaultComponent(name) {
+  return {
+    el: name,
+    children: 'children',
+    attr: {},
+  };
+}
+
 function initComponent(name: string) {
   if (!name) return null;
-  return Object.assign({}, components[name.toLowerCase()] || null);
+  return Object.assign({}, components[name.toLowerCase()] || createDefaultComponent(name));
 }
 
 export function prepareComponentParameters(name: string, data: Object) {
